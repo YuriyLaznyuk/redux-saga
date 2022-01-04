@@ -16,7 +16,7 @@ const App: React.FC = () => {
 	// 	dispatch(fetchPostRequest());
 	// 	console.log(posts);
 	// }, []);
-
+	console.log(loading);
 	return (
 		<div className='wrapper'>
 			<div>
