@@ -27,9 +27,10 @@ const App: React.FC = () => {
 			{error && <h2>{error}</h2>}
 			{posts?.length > 0 ? (
 				posts?.map((i) => (
-					<div key={i.id}>
-						{i.title}
-						<p>{i.body}</p>
+					<div className='wrapper__post' key={i.id}>
+						<div className='wrapper__post-item'>UserId: {i.userId}</div>
+						<div className='wrapper__post-item'>Title: {i.title}</div>
+						<div className='wrapper__post-item'>Body: {i.body}</div>
 					</div>
 				))
 			) : (
