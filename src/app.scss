@@ -9,4 +9,14 @@
 		align-items: center;
 		text-align: center;
 	}
+
+	&__post{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&-item{
+			margin: 3px 5px;
+			border-bottom: 1px solid;
+		}
+	}
 }
