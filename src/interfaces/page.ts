@@ -1,4 +1,4 @@
 export interface IPage {
-	name: string;
+	name?: string;
 }
 export default IPage;

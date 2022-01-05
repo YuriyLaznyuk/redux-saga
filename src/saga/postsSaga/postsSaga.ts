@@ -5,7 +5,7 @@ import {fetchPostError, fetchPostSuccess} from '../../actions/postActions';
 
 const getPosts = () =>
 	axios.get<IPost[]>('https://jsonplaceholder.typicode.com/posts');
-
+//worker
 function* fetchPostsSaga() {
 	try {
 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -24,7 +24,7 @@ function* fetchPostsSaga() {
 		);
 	}
 }
-
+// watcher
 export function* postsSaga() {
 	yield all([takeLatest(PostActionTypes.FETCH_POST_REQUEST, fetchPostsSaga)]);
 }

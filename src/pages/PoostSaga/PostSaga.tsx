@@ -5,7 +5,7 @@ import {fetchPostRequest} from '../../actions/postActions';
 import IPage from '../../interfaces/page';
 import './postSaga.scss';
 
-const PostSaga = ({name}: IPage) => {
+const PostSaga = ({name = 'Saga'}: IPage) => {
 	const dispatch = useDispatch();
 	const {posts, error, loading} = useSelector(
 		(state: RootState) => state.posts,
