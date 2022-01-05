@@ -1,0 +1,19 @@
+.navigation{
+  padding: 10px ;
+  background: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+a{
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+  &:hover{
+    background: lightgray;
+  }
+
+}
+}

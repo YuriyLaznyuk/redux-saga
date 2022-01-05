@@ -1,22 +1,11 @@
+body{
+	margin: 0;
+	padding: 0;
+}
 .wrapper {
 	color: rgb(21, 32, 192);
 	text-align: center;
+	min-height: calc(100vh - 100px);
 
-	&__img {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-	}
 
-	&__post{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		&-item{
-			margin: 3px 5px;
-			border-bottom: 1px solid;
-		}
-	}
 }

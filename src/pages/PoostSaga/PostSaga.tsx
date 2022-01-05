@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../../store/reducers';
 import {fetchPostRequest} from '../../actions/postActions';
 import IPage from '../../interfaces/page';
-import Navigation from '../../components/Navigation/Navigation';
+import './postSaga.scss';
 
 const PostSaga = ({name}: IPage) => {
 	const dispatch = useDispatch();
@@ -11,20 +11,24 @@ const PostSaga = ({name}: IPage) => {
 		(state: RootState) => state.posts,
 	);
 	return (
-		<div>
-			<Navigation />
+		<div className='postSaga'>
 			<h1>PostSaga {name}</h1>
-			<div>
-				<button onClick={() => dispatch(fetchPostRequest())}>get Post</button>
+			<div className='postSaga__buttons'>
+				<button
+					className='postSaga__buttons-btn'
+					onClick={() => dispatch(fetchPostRequest())}>
+					get Post
+				</button>
 			</div>
-			<div>
+			<div className='postSaga__blockPosts'>
 				{loading && <h2>...Loading</h2>}
 				{error && <h2>{error}</h2>}
 				{posts?.length > 0 ? (
 					posts.map((i) => (
-						<div key={i.id}>
-							UserId: {i.userId}
-							Title: {i.title} Body: {i.body}
+						<div className='postSaga__blockPosts-post' key={i.id}>
+							<strong>UserId:</strong> {i.userId} &nbsp;
+							<strong>Title:</strong> {i.title} &nbsp; <strong>Body:</strong>{' '}
+							{i.body}
 						</div>
 					))
 				) : (
