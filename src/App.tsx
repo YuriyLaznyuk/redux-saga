@@ -6,6 +6,7 @@ import About from './pages/About';
 import PostSaga from './pages/PoostSaga/PostSaga';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
+import EducationSaga from './pages/EducationSaga/EducationSaga';
 
 const App: React.FC = () => {
 	return (
@@ -13,9 +14,10 @@ const App: React.FC = () => {
 			<div className='wrapper'>
 				<Navigation />
 				<Routes>
-					<Route path='/' element={<Home name='home' />} />
-					<Route path='/about' element={<About name='about' />} />
-					<Route path='/saga' element={<PostSaga name='' />} />
+					<Route path='/' element={<Home />} />
+					<Route path='/about' element={<About name={'About test'} />} />
+					<Route path='/saga' element={<PostSaga />} />
+					<Route path='/education' element={<EducationSaga />} />
 				</Routes>
 			</div>
 			<Footer />
