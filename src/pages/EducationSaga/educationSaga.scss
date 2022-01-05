@@ -1,0 +1,12 @@
+.educationSaga{
+&__show{
+  margin: 20px auto;
+  width: 300px;
+  border-top: 1px solid;
+  &-item{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid;
+  }
+}
+}
