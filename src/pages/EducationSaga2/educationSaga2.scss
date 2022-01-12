@@ -1,0 +1,11 @@
+.educationSaga2{
+  text-align: center;
+  &__show{
+    margin: 30px auto;
+    width: 400px;
+    &-post{
+      margin: 0 0 10px 0;
+      border: 1px solid;
+    }
+  }
+}
